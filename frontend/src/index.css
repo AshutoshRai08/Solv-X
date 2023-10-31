@@ -1,0 +1,551 @@
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: red;
+}
+body {
+  background-color: rgb(247, 234, 211);
+  margin: 0;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header {
+  background: rgba(8, 154, 168, 0.741);
+  border: 1.5px solid black;
+  border-width: medium;
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-width: medium;
+}
+header a {
+  color: white;
+  text-decoration:solid;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+}
+.pages{
+  max-width: 100%;
+  /* padding: 20px; */
+  margin: 0;
+}
+
+/* homepage */
+.home {
+  display:block;
+  color: black;
+  
+}
+.home button{
+  max-width: 50%;
+}
+
+/* #070c12  ,  #3f4041 */
+
+/* ButtonLink.css */
+
+.button-container {
+  display: flex;
+  justify-content:right; /* Shifts the content to the right end */
+}
+
+.button-link {
+  padding: 10px 20px;
+  background-color: #070c12;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button-link:hover {
+  background-color: #3f4041;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.problem-details {
+  background: rgb(237, 238, 238);
+  color: black;
+  border: 1.6px solid black;
+  border-radius: 5px;
+  border-color: black;
+  border-width: medium;
+  margin: 7px 0 0 0;
+  padding: 10px;
+  position: relative;
+  text-decoration: none;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+
+}
+.problem-details h4 {
+  margin: 0 0 5px 0;
+  font-size: 1.4em;
+  color: black;
+  text-decoration: none;
+  text-transform: none;
+  text-decoration-skip: none;
+  padding-left: 5px;
+  margin-left: 5px;
+
+}
+
+.head{
+  /* margin: 0; */
+  font-size: 1em;
+  color: black;
+  text-decoration: none;
+  text-transform: none;
+  padding-left: 5px;
+  margin-left: 5px;
+
+}
+.problem-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: black;
+  text-decoration: none;
+  padding-left: 5px;
+  margin-left: 5px;
+}
+.problem-details span {
+  position:absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+  margin-left: 5px;
+
+}
+
+
+/* CSS for ProblemPage component with a black and white theme */
+
+.problem-page {
+  background-color:  rgb(247, 234, 211);
+  color: #000; /* Black text color */
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y:hidden;
+  overflow-wrap: normal;
+  overflow-x: hidden;
+  display: flex;
+  /* width: 100%; */
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items:stretch; */
+  height: 120%;
+}
+
+.problem-section {
+  background-color: white; /* Black background */
+  color: black; /* White text color */
+  padding: 20px;
+  border-radius: 5px;
+  border-color: black;
+  width: 40%;
+  border-width: medium;
+  border-style: solid;
+ 
+}
+
+.problem-section h2 {
+  font-size: 30px;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.tab-content p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Customize the active tab and button styles */
+.tab-button {
+  background-color: #000;
+  color:black;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-button:hover {
+  background-color: #fff;
+  color: #91c5cabd;;
+  text-decoration: none;
+}
+
+.active {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Style the links to submissions and leaderboard */
+.link-button {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.link-button:hover {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+}
+
+/* ProblemForm.css */
+.tab-buttons {
+  display: flex;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-button.active {
+  border-color: #089aa8bd;; /* Color for active tab */
+}
+
+/* Adjust the styles to match your design preferences. */
+
+
+.create {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin: 0;
+  color: #333;
+}
+
+.create h3 {
+  font-size: 25px;
+  margin: 0 0 20px;
+  color:rgb(11, 11, 11);
+  text-justify: distribute;
+  
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  */
+
+}
+
+.create label {
+  font-weight: bold;
+}
+
+.create input,
+.create select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #0b0b0b;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1.7px;
+}
+
+.create input.error,
+.create select.error {
+  border-color: #f44336; /* Red border for error fields */
+}
+
+.create p {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.create button {
+  background-color:  rgba(8, 154, 168, 0.741);
+  color:black;
+  padding: 10px 20px;
+  border: 1.5px solid black;
+  border-width: medium;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.create button:hover {
+  background-color: rgb(115, 169, 169);
+}
+
+
+.problem-section {
+  background-color: #fff; /* White background for the problem section */
+  color: #000; /* Black text for the problem section */
+  width: 40%;
+}
+
+/* .submission-section {
+  background-color: #000; 
+  color: #fff; 
+} */
+
+/* Adjust the styles for better visual appeal */
+.problem-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.problem-section p {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+.compile{
+  padding: 10px;
+  border: 1px solid black;
+  border-width: medium;
+  background-color:  rgba(8, 154, 168, 0.5);
+  
+}
+/* .submission-section h2 {
+  font-size: 24px;
+  margin-bottom:2px;
+}
+
+.submission-section p {
+  font-size: 16px;
+  margin: 0;
+} */
+
+/* Center the content within each section */
+.problem-section,
+.submission-section {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+/* CSS to style the output within the SubmissionForm and keep it within the frame */
+
+/* new form */
+label, input {
+  display: block;
+  padding-bottom: 10px;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid black;
+  border-width: medium;
+  border-radius: 4px;
+  box-sizing:border-box;
+  text-align: justify;
+  font-size: 18px;
+}
+h3 {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: Roboto;
+  font-size: 18px;
+}
+p a {
+  color: white;
+
+}
+form button {
+  background:black;
+  border: 0;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  font-family: Roboto;
+  border-radius: 4px;
+  border-color: white;
+  cursor: pointer;
+  margin-left: 2px;
+  margin-top: 10px;
+}
+div.error {
+  padding: 10px;
+  background: white;
+  border: 1px solid rgb(114, 4, 4);
+  color:rgb(114, 4, 4) ;
+  border-radius: 3px;
+  margin: 20px 0;
+}
+input.error {
+  border: 1px solid rgb(114, 4, 4);
+}
+
+/* navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a {
+  margin-left: 10px;
+  font-size: 1.5em;;
+}
+nav button {
+  background: #fff;
+  color: black;
+  border: 2px solid ;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+/* auth forms */
+
+form.signup, form.login {
+  color:black;
+  text-emphasis: bold;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background:  rgba(8, 154, 168, 0.741);
+  border: 2px solid black;
+  border-width: medium;
+  /* border-radius: 2px; */
+}
+/* Add styles to make the buttons smaller and place them side by side with space */
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Place buttons side by side with space in between */
+  margin: 10px;
+}
+
+.small-button {
+  padding: 14px; /* Adjust padding to make the buttons smaller */
+  background-color: #070c12;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.small-button:hover {
+  background-color: #3f4041;
+  color: #fff;
+  text-decoration: none;
+}
+
+.compile {
+  font-size: 18px; 
+  margin: 0;
+}
+/* problem description */
+/* .problem-description {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+} */
+
+div.output {
+  padding: 5px;
+  background: #ffefef;
+  border: 1px solid green;
+  color: green;
+  border-radius: 2px;
+  margin: 5px 0;
+}
+
+.error-popup {
+  position: fixed;
+  top: calc(100px + 0.5cm);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  width: 50px;
+  /* max-width: 80%; */
+}
+
+.problems button {
+  background: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family:Roboto;
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 10px;
+  transition: --pr 0.3s;
+}
+
+.problems button:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+/* Submissions */
+.submissions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.submissions-table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+}
+
+.submissions-table th {
+  background-color: #089aa8bd;;
+  padding: 10px;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.submissions-table td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.submissions p {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+  color: var(--error);
+}
