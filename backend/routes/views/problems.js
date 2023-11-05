@@ -20,7 +20,6 @@ router.get('/:id', getProblem)
 // POST single problem
 router.post('/', createProblem)
 
-// DELETE single problem
 router.delete('/', deleteProblem)
 
 module.exports = router

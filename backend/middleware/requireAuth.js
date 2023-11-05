@@ -19,7 +19,7 @@ const requireAuth = async (req, res, next) => {
 
         // use this ID and fetch the User from db
 
-        // attach user's id to user obj in req going forward so subsequent views can access user from request
+        // attach user's id to user object so subsequent views can access user from request
         req.user = await User.findOne({ _id }).select('_id')
         next()
 

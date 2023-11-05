@@ -1,8 +1,6 @@
 import { useAuthContext } from '../hooks/useAuthContext'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-
-// date fns
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
 const Leaderboard = () => {
@@ -14,7 +12,7 @@ const Leaderboard = () => {
 
     const fetchLeaderboardData = async () => {
         try {
-            const response = await fetch(`/api/submissions/leaderboard/?problem_id=${problemId}`, {
+            const response = await fetch(`http://13.234.217.83:4000/api/submissions/leaderboard/?problem_id=${problemId}`, {
                 method: 'GET',
                 headers: {
                   'Authorization': `Bearer ${user.token}`
@@ -39,7 +37,7 @@ const Leaderboard = () => {
     useEffect(() => {
         if (user) {
             fetchLeaderboardData()
-        }
+        } // eslint-disable-next-line
       }, [problemId, user])
     
 

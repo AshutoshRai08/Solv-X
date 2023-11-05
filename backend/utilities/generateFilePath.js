@@ -9,7 +9,6 @@ if (!fs.existsSync(codeDirectory)){
 
 const generateFilePath = async (language, code) => {
     const fileName = `${uuid()}.${language}`
-    // const fileName = 'HelloWorld.java'
     const filePath = path.join(codeDirectory, fileName)
     await fs.writeFileSync(filePath, code)
     return filePath

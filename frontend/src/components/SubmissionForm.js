@@ -21,7 +21,7 @@ const SubmissionForm = ({ problemId }) => {
     }
 
     const payload = { language, code, input };
-    const response = await fetch("/api/code/run", {
+    const response = await fetch("http://13.234.217.83:4000/api/code/run", {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
@@ -56,7 +56,7 @@ const SubmissionForm = ({ problemId }) => {
     }
 
     const payload = { language, code, problem_id: problemId };
-    const response = await fetch("/api/code/submit", {
+    const response = await fetch("http://13.234.217.83:4000/api/code/submit", {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
@@ -136,9 +136,9 @@ const SubmissionForm = ({ problemId }) => {
         <div>
           <label>Submission</label>
           <div className={submission.verdict === "failed" ? "error" : "output"}>
-            <p>Verdict: {submission.verdict}</p>
-            <p>Total Test Cases: {submission.totalTestCases}</p>
-            <p>Test Cases Passed: {submission.testCasesPassed}</p>
+            <p>Verdict -  {submission.verdict}</p>
+            <p>Total Test Cases - {submission.totalTestCases}</p>
+            <p>Test Cases Passed -  {submission.testCasesPassed}</p>
           </div>
         </div>
       )}

@@ -39,7 +39,7 @@ const Submission = () => {
     useEffect(() => {
         if (user) {
             fetchProblemSubmissionData()
-        }
+        }// eslint-disable-next-line
       }, [problemId, user])
     
 
@@ -50,7 +50,7 @@ const Submission = () => {
             {isLoading && <p>Loading...</p>}
             {error && <p>{error}</p>}
             {!isLoading && !error && submissions.length === 0 && (
-                <p>No submissions found for this problem.</p>
+                <p>No submissions found for this problem by the current user.</p>
             )}
 
             {!isLoading && !error && submissions.length > 0 && (

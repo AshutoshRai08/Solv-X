@@ -42,7 +42,7 @@ const submitProblem = async (req, res) => {
         return res.status(400).json({ error: 'Please fill in all the fields', emptyFields})
     }
 
-    // create an entry in submissions model and set verdict as in_process
+    // entry in submissions model and setting verdict as in_process
     const submission = await Submission.create({user_id, problem_id, verdict: 'In_Process', language})
     try {
         const filePath = await generateFilePath(language, code)
@@ -60,8 +60,6 @@ const submitProblem = async (req, res) => {
             const testCaseinput = testCase.input
             const testCaseOutput=testCase.output
             let codeOutput = await executeCode(filePath, language, testCaseinput)
-            // console.log(typeof(codeOutput))
-            // console.log(typeof(testCaseOutput))
             codeOutput = codeOutput.replace(/\n$/, '');
             if (codeOutput.trim() == testCaseOutput.trim()) {
                 testCasesPassed += 1
@@ -77,7 +75,7 @@ const submitProblem = async (req, res) => {
             score = testCasesPassed/totalTestCases * 100
         }
 
-        // update submission entry
+        // updating submission entry
         await Submission.findOneAndUpdate({_id: submission._id}, {verdict,score})
         res.status(200).json({totalTestCases, testCasesPassed, verdict})
     } catch (error) {

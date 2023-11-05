@@ -1,5 +1,4 @@
 
-/* layout */
 :root {
   --primary: #1aac83;
   --error: red;
@@ -16,7 +15,7 @@ header {
 }
 header .container {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0;
   padding: 10px 20px;
   display: flex;
   align-items: center;
@@ -27,30 +26,30 @@ header a {
   color: white;
   text-decoration:solid;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+  margin-left: 0;
 }
+
 .pages{
   max-width: 100%;
-  /* padding: 20px; */
   margin: 0;
 }
 
 /* homepage */
 .home {
   display:block;
-  color: black;
-  
+  color: black;  
+
 }
 .home button{
   max-width: 50%;
 }
 
-/* #070c12  ,  #3f4041 */
 
-/* ButtonLink.css */
+/* Button container for add a new problem and run submit buttons */
 
 .button-container {
   display: flex;
-  justify-content:right; /* Shifts the content to the right end */
+  justify-content:right;
 }
 
 .button-link {
@@ -129,11 +128,11 @@ header a {
 }
 
 
-/* CSS for ProblemPage component with a black and white theme */
+/* CSS for ProblemPage component  */
 
 .problem-page {
   background-color:  rgb(247, 234, 211);
-  color: #000; /* Black text color */
+  color: #000;
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -141,16 +140,14 @@ header a {
   overflow-wrap: normal;
   overflow-x: hidden;
   display: flex;
-  /* width: 100%; */
   flex-direction: row;
   justify-content: space-between;
-  /* align-items:stretch; */
   height: 120%;
 }
 
 .problem-section {
-  background-color: white; /* Black background */
-  color: black; /* White text color */
+  background-color: white; 
+  color: black; 
   padding: 20px;
   border-radius: 5px;
   border-color: black;
@@ -173,7 +170,7 @@ header a {
   margin-bottom: 10px;
 }
 
-/* Customize the active tab and button styles */
+/*  active tab and button styles */
 .tab-button {
   background-color: #000;
   color:black;
@@ -196,7 +193,7 @@ header a {
   color: #000;
 }
 
-/* Style the links to submissions and leaderboard */
+/* links to submissions and leaderboard */
 .link-button {
   background-color: #000;
   color: #fff;
@@ -232,10 +229,6 @@ header a {
 .tab-button.active {
   border-color: #089aa8bd;; /* Color for active tab */
 }
-
-/* Adjust the styles to match your design preferences. */
-
-
 .create {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -252,9 +245,6 @@ header a {
   margin: 0 0 20px;
   color:rgb(11, 11, 11);
   text-justify: distribute;
-  
-  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  */
-
 }
 
 .create label {
@@ -300,17 +290,11 @@ header a {
 
 
 .problem-section {
-  background-color: #fff; /* White background for the problem section */
-  color: #000; /* Black text for the problem section */
+  background-color: #fff;
+  color: #000;
   width: 40%;
 }
 
-/* .submission-section {
-  background-color: #000; 
-  color: #fff; 
-} */
-
-/* Adjust the styles for better visual appeal */
 .problem-section h2 {
   font-size: 24px;
   margin-bottom: 10px;
@@ -328,28 +312,17 @@ header a {
   background-color:  rgba(8, 154, 168, 0.5);
   
 }
-/* .submission-section h2 {
-  font-size: 24px;
-  margin-bottom:2px;
-}
 
-.submission-section p {
-  font-size: 16px;
-  margin: 0;
-} */
-
-/* Center the content within each section */
 .problem-section,
 .submission-section {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
 }
 
-/* CSS to style the output within the SubmissionForm and keep it within the frame */
 
-/* new form */
+/* the first login page*/
+
+
 label, input {
   display: block;
   padding-bottom: 10px;
@@ -391,6 +364,8 @@ form button {
   margin-left: 2px;
   margin-top: 10px;
 }
+
+/* Errors */
 div.error {
   padding: 10px;
   background: white;
@@ -407,12 +382,16 @@ input.error {
 nav {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  margin-right: 10px; 
 }
 nav a {
-  margin-left: 10px;
-  font-size: 1.5em;;
+  font-size: 1.5em;
+  justify-content: flex-end;
+  margin-right: 10px; 
 }
 nav button {
+  justify-content: flex-end;
   background: #fff;
   color: black;
   border: 2px solid ;
@@ -422,30 +401,42 @@ nav button {
   cursor: pointer;
   font-size: 1em;
   margin-left: 10px;
+  margin-right: 10px; 
+}
+.logout {
+  position: absolute;
+  top: 35px; 
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.logout span {
+  margin-right: 10px;
 }
 
 /* auth forms */
-
+/* the main homepage container */
 form.signup, form.login {
   color:black;
   text-emphasis: bold;
   max-width: 400px;
-  margin: 40px auto;
+  margin: 85px auto;
   padding: 20px;
   background:  rgba(8, 154, 168, 0.741);
   border: 2px solid black;
   border-width: medium;
-  /* border-radius: 2px; */
 }
-/* Add styles to make the buttons smaller and place them side by side with space */
+
+/* Compiler Buttons */
 .button-container {
   display: flex;
-  justify-content: space-between; /* Place buttons side by side with space in between */
+  justify-content: space-between; 
   margin: 10px;
 }
 
 .small-button {
-  padding: 14px; /* Adjust padding to make the buttons smaller */
+  padding: 14px;
   background-color: #070c12;
   color: #fff;
   text-decoration: none;
@@ -466,12 +457,6 @@ form.signup, form.login {
   font-size: 18px; 
   margin: 0;
 }
-/* problem description */
-/* .problem-description {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 100px;
-} */
 
 div.output {
   padding: 5px;

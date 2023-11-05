@@ -7,6 +7,7 @@ const code = require('./views/code')
 
 router.get('/', (req, res) => {
     res.json({msg: 'BASE ROUTE'})
+    console.log("Working")
 })
 
 router.use('/problems', problem)

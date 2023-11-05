@@ -9,15 +9,21 @@ const routes = require('./routes/index')
 // express app
 const app = express()
 
+
 const corsOptions = {
-    origin: ['http://localhost:3000'],
-  };
+  origin: 'http://onlinejudge-solvex.vercel.app/',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, 
+};
+
+app.use(cors());
+
   
 
 // middleware
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
-app.use(cors(corsOptions));
+// app.use(cors());
 
 
   
@@ -29,7 +35,7 @@ app.use((req, res, next) => {
 // routes
 app.use('/api', routes)
 
-// connect to db
+// connect to database
 const url=process.env.MONGO_URI
 mongooose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {

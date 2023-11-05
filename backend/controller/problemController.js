@@ -2,7 +2,7 @@ const Problem = require('../models/problemSchema')
 const mongoose = require('mongoose')
 
 
-// Create a new problem
+// Creating a new problem
 const createProblem = async (req, res) => {
     const created_by = req.user._id
     const {title, description, test_cases, tag, difficulty} = req.body

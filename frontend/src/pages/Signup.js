@@ -17,21 +17,21 @@ const Signup = () => {
         <form className='signup' onSubmit={handleSubmit}>
             <h3>Sign Up</h3>
 
-            <label>Email: </label>
+            <label>Email </label>
             <input
                 type="email"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
             />
 
-            <label>Username: </label>
+            <label>Username </label>
             <input
                 type="text"
                 onChange={(e) => setUsername(e.target.value)}
                 value={username}
             />
 
-            <label>Password: </label>
+            <label>Password </label>
             <input
                 type="password"
                 onChange={(e) => setPassword(e.target.value)}
