@@ -4,7 +4,7 @@ The Online Judge is designed to provide a user-friendly platform for individuals
 
 **[Demo Link](https://drive.google.com/file/d/1wWEZ31d1YjDXky_7eIGtNGdOjS1NMCWY/view)**
 
-Features
+## Features
 
 ### Authentication
 The User should be able to sign up and log in into the portal in order to write and execute code. This is
