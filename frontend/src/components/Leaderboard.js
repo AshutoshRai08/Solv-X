@@ -12,7 +12,7 @@ const Leaderboard = () => {
 
     const fetchLeaderboardData = async () => {
         try {
-            const response = await fetch(`http://13.234.217.83:4000/api/submissions/leaderboard/?problem_id=${problemId}`, {
+            const response = await fetch(`/api/submissions/leaderboard/?problem_id=${problemId}`, {
                 method: 'GET',
                 headers: {
                   'Authorization': `Bearer ${user.token}`

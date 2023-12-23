@@ -14,7 +14,7 @@ const Submission = () => {
 
     const fetchProblemSubmissionData = async () => {
         try {
-            const response = await fetch(`http://13.234.217.83:4000/api/submissions/?problem_id=${problemId}`, {
+            const response = await fetch(`/api/submissions/?problem_id=${problemId}`, {
                 method: 'GET',
                 headers: {
                   'Authorization': `Bearer ${user.token}`
@@ -45,7 +45,7 @@ const Submission = () => {
 
     return (
         <div className="submission-page">   
-            <h2>Submissions</h2>
+            <h2 className='headd'>Submissions</h2>
             
             {isLoading && <p>Loading...</p>}
             {error && <p>{error}</p>}

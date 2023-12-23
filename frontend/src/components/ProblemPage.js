@@ -10,7 +10,7 @@ const ProblemPage = () => {
     const [activeTab, setActiveTab] = useState("description");
 
     const fetchProblemData = async () => {
-        const response = await fetch('http://13.234.217.83:4000/api/problems/' + problemId, {
+        const response = await fetch('/api/problems/' + problemId, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${user.token}`

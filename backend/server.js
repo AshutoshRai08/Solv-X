@@ -11,7 +11,7 @@ const app = express()
 
 
 const corsOptions = {
-  origin: 'http://onlinejudge-solvex.vercel.app/',
+  origin: 'http://localhost:3000',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, 
 };

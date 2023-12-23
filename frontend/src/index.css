@@ -4,14 +4,20 @@
   --error: red;
 }
 body {
-  background-color: rgb(247, 234, 211);
+  /* background-color: rgb(247, 234, 211); */
+  background: rgb(34,34,34);
+  background: linear-gradient(77deg, rgba(34,34,34,1) 0%, rgba(32,88,33,1) 99%);
   margin: 0;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family:'Cambria';
+  height: 100vh;
 }
 header {
-  background: rgba(8, 154, 168, 0.741);
-  border: 1.5px solid black;
-  border-width: medium;
+  /* background: rgba(5, 5, 5, 0.299); */
+  background:  rgba(15, 16, 16, 0.75);
+  border: none;
+  margin: none;
+  /* border: 1.5px solid black;
+  border-width: medium; */
 }
 header .container {
   max-width: 1400px;
@@ -71,9 +77,11 @@ header a {
 
 
 .problem-details {
-  background: rgb(237, 238, 238);
+  /* background: rgb(237, 238, 238); */
+  background:  rgba(130, 201, 130, 0.5);
+  /* background-color: rgba(81, 178, 92, 0.745); */
   color: black;
-  border: 1.6px solid black;
+  border: 5px solid black;
   border-radius: 5px;
   border-color: black;
   border-width: medium;
@@ -81,43 +89,44 @@ header a {
   padding: 10px;
   position: relative;
   text-decoration: none;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 
 }
 .problem-details h4 {
   margin: 0 0 5px 0;
-  font-size: 1.4em;
+  font-size: 1.3em;
   color: black;
+  font-family:'Arial';
   text-decoration: none;
   text-transform: none;
   text-decoration-skip: none;
   padding-left: 5px;
   margin-left: 5px;
-
+  padding-bottom: 5px;
 }
 
 .head{
-  /* margin: 0; */
   font-size: 1em;
   color: black;
   text-decoration: none;
   text-transform: none;
   padding-left: 5px;
+  /* padding-bottom: 5px; */
   margin-left: 5px;
-
 }
 .problem-details p {
   margin: 0;
-  font-size: 0.9em;
+  font-size: 1.0em;
   color: black;
   text-decoration: none;
   padding-left: 5px;
   margin-left: 5px;
+  padding-bottom: 7px;
 }
 .problem-details span {
   position:absolute;
-  top: 20px;
-  right: 20px;
+  top: 30px;
+  right: 15px;
   cursor: pointer;
   background: #f1f1f1;
   padding: 6px;
@@ -131,7 +140,7 @@ header a {
 /* CSS for ProblemPage component  */
 
 .problem-page {
-  background-color:  rgb(247, 234, 211);
+  /* background-color:  rgb(247, 234, 211); */
   color: #000;
   padding: 30px;
   border-radius: 5px;
@@ -184,7 +193,7 @@ header a {
 
 .tab-button:hover {
   background-color: #fff;
-  color: #91c5cabd;;
+  color: #174f19bd;
   text-decoration: none;
 }
 
@@ -227,28 +236,31 @@ header a {
 }
 
 .tab-button.active {
-  border-color: #089aa8bd;; /* Color for active tab */
+  border-color: #174f19bd; /* Color for active tab */
 }
 .create {
-  background-color: #fff;
-  border: 1px solid #ccc;
+  margin: 0;
   border-radius: 5px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 100%;
   margin: 0;
-  color: #333;
+  color: rgba(255, 255, 255, 0.897);
 }
 
 .create h3 {
-  font-size: 25px;
+  font-size: 30px;
   margin: 0 0 20px;
-  color:rgb(11, 11, 11);
+  font-family: 'Arial';
+  color:white;
   text-justify: distribute;
 }
 
 .create label {
   font-weight: bold;
+  font-size: 1.2em;
+  font-family: 'Arial';
+  padding: 1.6px;
 }
 
 .create input,
@@ -260,7 +272,9 @@ header a {
   border-radius: 5px;
   border-style: solid;
   border-width: 1.7px;
+  background-color: rgb(195, 226, 207,0.9);
 }
+
 
 .create input.error,
 .create select.error {
@@ -274,18 +288,21 @@ header a {
 }
 
 .create button {
-  background-color:  rgba(8, 154, 168, 0.741);
-  color:black;
+  /* background-color:  rgba(8, 154, 168, 0.741); */
+  /* background:  rgba(16, 132, 65, 0.6); */
+  background-color: black;
+  color:white;
   padding: 10px 20px;
-  border: 1.5px solid black;
-  border-width: medium;
+  border: 0.2px solid white;
+  /* border-width: medium; */
+  font-family: 'Arial';
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
 }
 
 .create button:hover {
-  background-color: rgb(115, 169, 169);
+  background-color: rgb(34, 51, 45);
 }
 
 
@@ -309,7 +326,9 @@ header a {
   padding: 10px;
   border: 1px solid black;
   border-width: medium;
-  background-color:  rgba(8, 154, 168, 0.5);
+  /* background-color:  rgba(81, 178, 92, 0.745); */
+  background:  rgba(130, 201, 130, 0.5);
+  color: white;
   
 }
 
@@ -384,11 +403,13 @@ nav {
   align-items: center;
   justify-content: flex-end;
   margin-right: 10px; 
+  color: white;
 }
 nav a {
   font-size: 1.5em;
   justify-content: flex-end;
   margin-right: 10px; 
+  color: white;
 }
 nav button {
   justify-content: flex-end;
@@ -418,14 +439,19 @@ nav button {
 /* auth forms */
 /* the main homepage container */
 form.signup, form.login {
-  color:black;
+  color:white;
   text-emphasis: bold;
   max-width: 400px;
+  font-size: 1.2em;
   margin: 85px auto;
   padding: 20px;
-  background:  rgba(8, 154, 168, 0.741);
+  background:  rgba(15, 16, 16, 0.75);
   border: 2px solid black;
   border-width: medium;
+}
+
+.login h3{
+  font-size: 1.3em;
 }
 
 /* Compiler Buttons */
@@ -504,11 +530,17 @@ div.output {
 /* Submissions */
 .submissions {
   display: flex;
+  color: white;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
+.submission-page h2{
+  color: white;
+  text-align: center;
+  font-size: 2em;
+}
 .submissions-table {
   margin: 20px auto;
   border-collapse: collapse;
@@ -517,15 +549,19 @@ div.output {
 }
 
 .submissions-table th {
-  background-color: #089aa8bd;;
+  background-color: white;
+  color: black;
   padding: 10px;
   font-weight: bold;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .submissions-table td {
   padding: 10px;
-  border: 1px solid black;
+  border: 2px solid black;
+  color: white;
+  font-size: 1.2em;
+  
 }
 
 .submissions p {

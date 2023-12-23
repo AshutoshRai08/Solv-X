@@ -9,7 +9,7 @@ const ProblemListDetails = ({ problem }) => {
   const [error, setError] = useState(null);
 
   const handleClick = async () => {
-    const response = await fetch(`http://13.234.217.83:4000/api/problems/?id=${problem._id}`, {
+    const response = await fetch(`/api/problems/?id=${problem._id}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${user.token}`,

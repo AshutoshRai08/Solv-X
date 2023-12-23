@@ -21,7 +21,7 @@ const SubmissionForm = ({ problemId }) => {
     }
 
     const payload = { language, code, input };
-    const response = await fetch("http://13.234.217.83:4000/api/code/run", {
+    const response = await fetch("/api/code/run", {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
@@ -56,7 +56,7 @@ const SubmissionForm = ({ problemId }) => {
     }
 
     const payload = { language, code, problem_id: problemId };
-    const response = await fetch("http://13.234.217.83:4000/api/code/submit", {
+    const response = await fetch("/api/code/submit", {
       method: "POST",
       body: JSON.stringify(payload),
       headers: {
@@ -100,7 +100,7 @@ const SubmissionForm = ({ problemId }) => {
   value={code}
   onChange={(e) => setCode(e.target.value)}
   className={emptyFields.includes("code") ? "error" : ""}
-  style={{ color: "blue", width: 700, height: 350, border: "1px solid black" }}
+  style={{ color: "black", width: 700, height: 350, border: "1px solid black" }}
 />
 
 
