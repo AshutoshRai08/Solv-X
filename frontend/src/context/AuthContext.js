@@ -19,9 +19,8 @@ export const AuthContextProvider = ({children}) => {
         user: null
     })
     
-    // fire only once when the app first renders
+    
     useEffect(() => {
-        // parse json string into an object
         const user = JSON.parse(localStorage.getItem('user'))
         if (user) {
             dispatch({type: 'LOGIN', payload: user})

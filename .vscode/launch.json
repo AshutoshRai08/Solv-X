@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/dell/Downloads/online-judge-master/online-judge-master/backend/codes",
-      "program": "c:/Users/dell/Downloads/online-judge-master/online-judge-master/backend/codes/build/Debug/outDebug",
+      "cwd": "d:/OnlineJudge/backend/codes",
+      "program": "d:/OnlineJudge/backend/codes/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

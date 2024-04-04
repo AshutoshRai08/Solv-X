@@ -22,6 +22,7 @@ const Login = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
             />
+            <p className="def-p">Demo Email - guest@gmail.com</p>
 
             <label><b>Password</b></label>
             <input
@@ -29,6 +30,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
             />
+            <p className="def-p">Demo Password - Guest123</p>
 
             <button disabled={isLoading}>Log in</button>
             {error && <div className="error">{error}</div>}

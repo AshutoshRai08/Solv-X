@@ -107,7 +107,7 @@ const SubmissionForm = ({ problemId }) => {
       <label>
         <b>Enter input here</b>
       </label>
-      <textarea
+      <textarea 
         rows="5"
         cols="60"
         value={input}
